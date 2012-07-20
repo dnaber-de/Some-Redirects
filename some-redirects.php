@@ -70,8 +70,8 @@ class Some_Redirects {
 	public function init_settings() {
 
 		$desc  = 'Pro Zeile eine Weiterleitung nach dem Schema:' . "\n";
-		$desc .= '<code>[<em>Statuscode</em> ]<em>Quelle</em>[ <em>Ziel</em>]</code>' . "\n";
-		$desc .= 'Mögliche Statuscodes: 301, 302, 410. Wird kein Statuscode angegeben, wird 301 verwendet.' . "\n";
+		$desc .= '<code><em>Statuscode</em> <em>Quelle</em>[ <em>Ziel</em>]</code>' . "\n";
+		$desc .= 'Mögliche Statuscodes: 301, 302, 410.' . "\n";
 		$desc .= 'Die Quelle muss ohne Domain angegeben werden, das Ziel mit! Bis auf 410 muss auch ein Ziel angegeben werden.' . "\n";
 		$desc .= '<code>302 /some_page.php http://www.domain.tld/new_page/</code>';
 
@@ -140,7 +140,7 @@ class Some_Redirects {
 
 		$request = $_SERVER[ 'REQUEST_URI' ];
 		#strip query string
-		$request = str_replace( '?' . $_SERVER[ 'QUERY_STRING' ], '', $request );
+		#$request = str_replace( '?' . $_SERVER[ 'QUERY_STRING' ], '', $request );
 		$rules = explode( "\n", $this->options[ 'rules' ] );
 		$stati = array( '301', '302', '410' );
 
