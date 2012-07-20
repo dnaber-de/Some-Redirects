@@ -15,6 +15,7 @@ To say ```www.mysite.tld/old-image.jpg``` doesn't exist any longer add the line:
 To redirect from www.mysite.tld/old-page.html to www.mysite.tld/new-page/ add the line:
 ```
 /old-page.html http://www.mysite.tld/new-page/
+```
 
 ## Notices
 Admin-Pages are not redirectable. 
